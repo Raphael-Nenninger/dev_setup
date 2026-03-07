@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eou pipfail
+set -eou pipefail
 
 # Latex Setup (Tex Lilve + Extras + Texmaker) für Ubuntu
 
