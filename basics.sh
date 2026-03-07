@@ -25,6 +25,7 @@ for file in tools/*; do
 done
 
 echo "==> Dateien aus env nach ~/.config kopieren"
+mv .zshrc ~/
 mkdir -p ~/.config
 cp -r env/* ~/.config
 
