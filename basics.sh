@@ -3,6 +3,8 @@ set -eou pipefail
 
 echo "==> Basic Programms for installing"
 sudo apt update
+# Nach frischer Installation auch das System updaten
+sudo apt upgrade -y
 sudo apt install git curl fzf 
 
 echo "==> Führe Dateien in programming aus"
