@@ -17,6 +17,21 @@ sudo apt install -y \
   iptables \
   nftables
 
+cat <<'EOT' | sudo tee /etc/apparmor.d/home.raphael.bin.rootlesskit
+# ref: https://ubuntu.com/blog/ubuntu-23-10-restricted-unprivileged-user-namespaces
+abi <abi/4.0>,
+include <tunables/global>
+
+/home/raphael/bin/rootlesskit flags=(unconfined) {
+  userns,
+
+  # Site-specific additions and overrides. See local/README for details.
+  include if exists <local/home.raphael.bin.rootlesskit>
+}
+EOT
+
+sudo systemctl restart apparmor.service
+
 echo "==> 3) Rootless Docker installieren"
 curl -fsSL https://get.docker.com/rootless | sh
 
