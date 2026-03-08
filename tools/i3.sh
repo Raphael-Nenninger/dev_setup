@@ -20,7 +20,8 @@ sudo apt install -y \
 echo "==> Optional (empfohlen): Terminal + Launcher"
 sudo apt install -y \
   alacritty \
-  rofi
+  rofi \
+  polybar
 
 echo "==> Done."
 echo "Login: Beim Anmeldebildschirm Session 'i3' auswählen."
