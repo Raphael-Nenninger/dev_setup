@@ -5,7 +5,7 @@ echo "==> Basic Programms for installing"
 sudo apt update
 # Nach frischer Installation auch das System updaten
 sudo apt upgrade -y
-sudo apt install git curl fzf 
+sudo apt install git curl fzf thunar
 
 echo "==> Führe Dateien in programming aus"
 for file in programming/*; do
