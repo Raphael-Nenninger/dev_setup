@@ -181,6 +181,9 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+
+bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/lock.sh
+
 bar {
     mode invisible
 }
